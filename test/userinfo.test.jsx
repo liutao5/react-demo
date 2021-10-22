@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Userinfo from './index';
+import Userinfo from '../src/pages/userinfo';
 
 test('test Userinfo page', () => {
   const component = renderer.create(

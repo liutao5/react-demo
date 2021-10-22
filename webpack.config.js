@@ -2,6 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    historyApiFallback: true, // for react-router BrowserRouter component refresh
+  },
   entry: {
     index: './src/index.js',
   },
@@ -14,11 +17,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(css|less)$/i,
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
       {
-        test: /\.(js|jsx|ts|tsx)/i,
+        test: /\.(js|jsx|ts|tsx)$/i,
         use: {
           loader: 'babel-loader',
         },
