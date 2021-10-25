@@ -21,6 +21,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'linebreak-style': 'off',
     'no-use-before-define': 'off',
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
@@ -37,6 +38,9 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+      webpack: {
+        config: 'webpack.config.js',
       },
     },
   },
