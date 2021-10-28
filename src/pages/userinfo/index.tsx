@@ -1,5 +1,4 @@
 import React from 'react';
-import EchartsLine from '../../components/EchartsLine';
 import './style.less';
 
 export default () => (
@@ -9,6 +8,5 @@ export default () => (
       <p>inside</p>
     </div>
     <p>outside</p>
-    <EchartsLine />
   </>
 );
