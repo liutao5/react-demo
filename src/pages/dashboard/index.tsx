@@ -11,6 +11,11 @@ export default () => {
     socket.addEventListener('message', (event) => {
       setMsg(event.data.trim());
     });
+
+    return () => {
+      // close websocket when leave this page
+      socket.close();
+    };
   }, []);
 
   return (

@@ -1,12 +1,7 @@
-interface IReqConfig {
-    url: string;
-}
+import { get, post } from 'axios';
 
-export default (params: IReqConfig) => fetch('http://localhost:3000', {
-  body: JSON.stringify(params),
-  method: 'post',
-  mode: 'cors',
-}).then((res) => res.json()).catch((e) => {
-  console.error(e);
-  return e.toString();
-});
+const request = () => {
+  get('http://localhost:3000').then((res) => console.log(res)).catch((err) => console.log('err:', err));
+};
+
+export default request;
